@@ -75,13 +75,13 @@ If you pass a string, it will be used, if you pass a function, the returned stri
 
 ### Configuration options
 
-| key                    | type     | description                                                                                                                                                                                                     |
-|------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `slackBotToken`        | `string` | The bot token to use for posting messages. The bot should have the `` scopes.                                                                                                                                   |
-| `slackChannelId`       | `string` | The ID of the channel the bot should post the messages to. The bot should be a member of this channel.                                                                                                          |
-| `slackBotTokenEnvVar`  | `string` | An alternative to `slackBotToken`. If `slackBotToken` is not present, the reporter will try to read the token from an environment variable specified in this option. Default value is `SLACK_BOT_TOKEN`         |
+| key                    | type     | description                                                                                                                                                                                                |
+|------------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `slackBotToken`        | `string` | The bot token to use for posting messages. The bot should have the `chat:write` scope.                                                                                                                     |
+| `slackChannelId`       | `string` | The ID of the channel the bot should post the messages to. The bot should be a member of this channel.                                                                                                     |
+| `slackBotTokenEnvVar`  | `string` | An alternative to `slackBotToken`. If `slackBotToken` is not present, the reporter will try to read the token from an environment variable specified in this option. Default value is `SLACK_BOT_TOKEN`    |
 | `slackChannelIdEnvVar` | `string` | An alternative to `slackChannelId`. If `slackChannelId` is not present, the reporter will try to read the channel ID from an environment variable specified in this option. Default value is `SLACK_CHANNEL_ID` |
-| `texts`                | `object` | An object containing the bot messages for each test phase. See defaults and possible keys below.                                                                                                                |
+| `texts`                | `object` | An object containing the bot messages for each test phase. See defaults and possible keys below.                                                                                                           |
 
 #### Texts
 
