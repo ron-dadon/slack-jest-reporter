@@ -1,0 +1,12 @@
+{
+  "name": "slack-jest-reporter",
+  "version": "0.1.0",
+  "description": "A customizable slack bot reporter for jest",
+  "main": "index.js",
+  "repository": "git@github.com:ron-dadon/slack-jest-reporter.git",
+  "author": "Ron Dadon",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/web-api": "6.8.0"
+  }
+}
