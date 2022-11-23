@@ -47,7 +47,7 @@ An example for `json` file:
 }
 ```
 
-If you are using code for your configuration (`.js` extensions), you can pass functions for the
+If you are using code for your configuration (`.js|ts|mjs|cjs` extensions), you can pass functions for the
 texts keys, that will get the tests results where applicable, so you can better customize your message.
 If you pass a string, it will be used, if you pass a function, the returned string will be used.
 
