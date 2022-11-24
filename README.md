@@ -3,7 +3,7 @@
 </p>
 <h2 align="center">A customizable slack bot reporter for jest</h2>
 
-## Installation
+### Installation
 
 With yarn:
 
@@ -17,7 +17,7 @@ With NPM:
 $ npm install slack-jest-reporter
 ```
 
-## Jest configuration
+### Jest configuration
 
 Edit your `jest.config.js|ts|mjs|cjs|json` file, and add the reporter to your `reporters` array.
 If you don't have the reports key, add it.
@@ -77,7 +77,7 @@ If you pass a string, it will be used, if you pass a function, the returned stri
 }
 ```
 
-### Configuration options
+#### Configuration options
 
 | key                           | type      | description                                                                                                                                                                                               | default             |
 |-------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
@@ -91,7 +91,7 @@ If you pass a string, it will be used, if you pass a function, the returned stri
 | `screenshotsPath`             | `string`  | The base path to search the screenshot files                                                                                                                                                              | `./`                |
 | `screenshotsPattern`          | `string`  | A regex pattern to match the files in the screenshots path. Only files that will match, will be posted to the thread. You can use `{testName}` placeholder that will be replaced with the test case name. | `^{testName}\.jpg$` |
 
-#### Texts
+##### Texts
 
 The reporter allows for full customization of the messages that will be posted by the slack bot.
 The following table contains all the possible keys available for customization.
