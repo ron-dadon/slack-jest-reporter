@@ -63,7 +63,7 @@ If you pass a string, it will be used, if you pass a function, the returned stri
         slackChannelId: 'XXX',
         texts: {
           runStart: '🚀 Tests starting',
-          runProgress: ({ total, passed, failed, progress }) => `⏳ Tests running ${progress}% (Passed: ${passed} | Failed ${failed} | Total: ${total})`
+          runProgress: ({ total, passed, failed, progress }) => `⏳ Tests running ${progress}% (Passed: ${passed} | Failed ${failed} | Total: ${total})`,
           runCompletePassed: (results) => "🟢 Tests passed",
           runCompleteFailed: (results) => "❌ Tests failed",
           testCaseResultPassed: (testCaseResult) => `✅ ${testCaseResult.fullName} (⏳${testCaseResult.duration}ms)`,
