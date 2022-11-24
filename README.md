@@ -1,8 +1,7 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/11239161/203734683-abc91d20-c3d6-4397-aae6-c2085e20fedc.png" />
 </p>
-
-<h1 align="center">A customizable slack bot reporter for jest</h1>
+<h2 align="center">A customizable slack bot reporter for jest</h2>
 
 ## Installation
 
