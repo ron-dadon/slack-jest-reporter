@@ -1,5 +1,22 @@
 const fs = require('fs')
 const { WebClient } = require('@slack/web-api')
+const humanizeDuration = require("humanize-duration")
+
+const shortEnglishHumanizer = humanizeDuration.humanizer({
+  language: "shortEn",
+  languages: {
+    shortEn: {
+      y: () => "y",
+      mo: () => "mo",
+      w: () => "w",
+      d: () => "d",
+      h: () => "h",
+      m: () => "m",
+      s: () => "s",
+      ms: () => "ms",
+    },
+  },
+})
 
 const TEXTS = {
   runStart: 'Tests started',
@@ -134,7 +151,7 @@ class SlackReporter {
         : this._texts.testCaseResultFailed
       const text = typeof resultText === 'function' ? resultText(testCaseResult) : resultText
         .replaceAll('{testName}', testCaseResult.fullName)
-        .replaceAll('{duration}', testCaseResult.duration)
+        .replaceAll('{duration}', shortEnglishHumanizer(+testCaseResult.duration, { units: ['h','m','s'] }))
       await this._postReply({ text })
       if (this._options.attachScreenshotsOnlyOnFail && testCaseResult.status === 'passed') return
       await this._postScreenshots({ testName: testCaseResult.fullName })
